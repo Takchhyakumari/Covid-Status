@@ -1,0 +1,31 @@
+<%- include("../partials/header")%>
+<div style="background-image: linear-gradient(to right,yellow,pink,beige);">
+<br>
+<br>
+<div class="container">
+	<div class="row text-center" style="display: flex; flex-wrap: wrap; color:black">
+		<% data["Countries"].forEach(function(country){ %>
+			<div class="col-md-6">
+				<div class="shadow-lg p-3 mb-5 rounded" style="background-color: ;">
+				<h2>
+					<strong><%= country["Country"] %></strong>
+				</h2>
+				</br>
+					<h5>
+						<strong>Total recorded - <em><%= country['TotalConfirmed']%></em></strong>
+					</h5>
+				<br>
+					<h5>
+						<strong>Total recovered - <em><%= country["TotalRecovered"] %></em></strong>
+					</h5>
+				<br>
+					<h5>
+						<strong>Total deaths - <em><%= country["TotalDeaths"] %></em></strong>
+					</h5>
+				</div>
+			</div>
+		<% }) %>
+	</div>
+</div>
+</div>
+<%- include("../partials/footer")%>

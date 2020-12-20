@@ -1,0 +1,45 @@
+<%- include("../partials/header")%>
+<br>
+<br>
+<div class="container-fluid">
+<div class="row text-center" style="display: flex; flex-wrap: wrap; color: white;">
+	<h1 class="display-2 pt-4 pb-4">
+	<!-- <div  style="background-color: black; text-color:white;"> -->
+		<div class="col-sm">
+		<div class="shadow-lg p-5 mb-5 rounded" style="background-color: ;">
+		<strong>Covid Status</strong>
+		</div>
+		</div>
+	<!-- </div> -->
+	</h1>
+<form action="/country" method="GET">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="shadow-lg p-3 mb-5 rounded" style="background-color: indigo;">
+			<h3> Total Cases </h3>
+			<br>
+				<h5><em><%= data.Global.TotalConfirmed %></em></h5>
+			</div>
+		</div>
+    	<div class="col-md-12">
+			<div class="shadow-lg p-3 mb-5 rounded" style="background-color: #f28dc4;">  
+				<!--cyan  #f28dc4-->
+			<h3> Recovered </h3>
+			<br>
+				<h5><em><%= data.Global.TotalRecovered %></em></h5>
+			</div>
+		</div>
+    	<div class="col-md-12">
+			<div class="shadow-lg p-3 mb-5 rounded" style="background-color: pink;">
+				<!-- #7fdbd8; pink -->
+			<h3> Deaths </h3>
+			<br>
+				<h5><em><%= data.Global.TotalDeaths %></em></h5>
+			</div>
+		</div>
+  </div>
+</form>
+</div>
+</div>
+
+<%- include("../partials/footer")%>
